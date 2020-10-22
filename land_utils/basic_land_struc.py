@@ -1,6 +1,6 @@
 import cv2
 import gdal
-import numpy
+import numpy as np
 
 def find_water_body(destinationFile, input, format):
   inpuDataset = gdal.Open(input)
@@ -33,8 +33,8 @@ def get_largest_rect(processedPic):
   skip = 1
   area_max = (0, [])
 
-  w = numpy.zeros(dtype=int, shape=a.shape)
-  h = numpy.zeros(dtype=int, shape=a.shape)
+  w = np.zeros(dtype=int, shape=a.shape)
+  h = np.zeros(dtype=int, shape=a.shape)
   for r in range(nrows):
       for c in range(ncols):
           if a[r][c] == skip:
