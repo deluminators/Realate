@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {Form,Input,Checkbox} from 'antd'
+import Styles from './Form.module.css';
 
 const CheckboxGroup = Checkbox.Group;
 
@@ -22,7 +23,7 @@ const FormComponent = () => {
 
     return <div style={{minHeight:'100vh',padding:'5px'}}>
         {/* <div style={{backgroundColor:'white'}}> */}
-        <Form style={{width:'50%',margin:'auto',backgroundColor:'white',padding:'30px',borderRadius:'20px'}} layout='vertical' form={form} >
+        <Form className={Styles.Form} layout='vertical' form={form} >
           
             <Form.Item label='Select required building types'>
             <CheckboxGroup
