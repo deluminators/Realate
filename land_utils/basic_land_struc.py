@@ -22,12 +22,10 @@ def find_water_body(destinationFile, input, format):
   return (processedPic)
 
 
-def get_largest_rect(processedPic):
+def get_largest_rect(processedPic, originalPic):
   a = cv2.cvtColor(processedPic, cv2.COLOR_RGB2GRAY)// 255
   ones = np.ones(a.shape)
   a = abs(a-ones)
-  print(a)
-
 
   nrows, ncols = a.shape 
   skip = 1
@@ -53,7 +51,11 @@ def get_largest_rect(processedPic):
               area = (dh+1)*minw
               if area > area_max[0]:
                   area_max = (area, [(r-dh, c-minw+1, r, c)])
-  return area_max[0], area_max[1]
+  area, t= area_max # area not needed as of now
+  y1, x1, y2, x2 = t[0]
+  b = originalPic.copy()
+  rect_im = cv2.rectangle(b, (x1, y1), (x2, y2), (255,0,0), 5)
+  return rect_im
 
 # print('area', area_max[0])
 # for t in area_max[1]:
