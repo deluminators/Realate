@@ -1,9 +1,13 @@
 .App {
   text-align: center;
+  background-image: url('https://i2.wp.com/www.localeadvisors.com/wp-content/uploads/2017/04/yard-home-hero.jpg?fit=2100%2C1400&ssl=1');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 8vmin;
   pointer-events: none;
 }
 
@@ -14,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   /* min-height: 100vh; */
   display: flex;
   flex-direction: row;
@@ -22,6 +26,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #282c34
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #282c34
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .App-link {
@@ -41,4 +56,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.tabStyle {
+  background-color: rgb(63, 70, 82, 0.8);
 }

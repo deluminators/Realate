@@ -1,12 +1,20 @@
+import Axios from 'axios';
 import React,{useState,useEffect} from 'react';
+import Config from '../../assets/config';
 
-const ShowPlatoData = () => {
-    const [loading,setLoading] = useState(false)
+const ShowPlatoData = (props) => {
+    const [loading,setLoading] = useState(true)
     const [text, setText] = useState('');
+    const [image,setImage] = useState();
     const x = [
       'Checking the data for plato, water bodies, forest etc....',
       'Converting data to visual mode...',
     ];
+    const get = async () => {
+      const resp =await Axios.get(`${Config.LINK}/resource/${props.data._id}`);
+      console.log(resp);
+      setImage(resp.data.resource.plato);
+    }
     useEffect(() => {
       const timeout = setTimeout(() => {
         setLoading(false);
@@ -28,13 +36,14 @@ const ShowPlatoData = () => {
           i++;
         }
       }, 80);
+      if(props.data) get();
       return () => {
         clearTimeout(timeout);
         clearInterval(interval);
       };
-    }, []);
+    }, [props.data]);
 
-return <div style={{width:'100%',minHeight:'100vh',color:'white',fontSize:18}}>{text}</div>
+return <div style={{width:'100%',minHeight:'100vh',color:'white',fontSize:18}}>{loading?text:<img style={{width:'200px',height:'200px'}} src={`${Config.LINK}${image}`}></img>}</div>
 }
 
 export default ShowPlatoData;

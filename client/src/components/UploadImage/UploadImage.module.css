@@ -1,6 +1,12 @@
 .imageContainer {
   width: 50%;
   height: 400px;
-  background-color: wheat;
   margin: 10px auto;
+}
+
+.contain {
+  background-image: url('https://thumbs.dreamstime.com/b/overview-arid-barren-land-drone-view-mountain-area-lush-green-fields-141141240.jpg');
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
 }
