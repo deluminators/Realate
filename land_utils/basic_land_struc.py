@@ -17,6 +17,8 @@ def find_water_body(destinationFile, input, format):
   th, processedPic = cv2.threshold(img, 65, 255, cv2.THRESH_BINARY)
 
   processedPic = cv2.cvtColor(processedPic, cv2.COLOR_BGR2RGB)
+  kernel = np.ones((2, 2), np.uint8) 
+  processedPic = cv2.dilate(processedPic, kernel)
 
   cv2.imwrite(destinationFile, processedPic)
   return (processedPic)
