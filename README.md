@@ -3,18 +3,17 @@
 ##### _real-time real-estate data prediction & analysis_
 
 A roboust application providing support for predicting and detecting land quality & cover, its optimal usage  for building flats or property, its generative model and  optimal paths to electric/water/sewage reserve.
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
 
 # Features
 
   - **Land Cover** : Real estate agents find int difficult to predict and  determine the land quality and optimal cover.
-  - **OPtimal usage** : Optimal usage of land for predicting the maximum number of flats and bunglows possible to fit into a chosen plot.
+  - **Optimal usage** : Optimal usage of land for predicting the maximum number of flats and bunglows possible to fit into a chosen plot.
   - **External supplies** : Finding optimized path for external supplies like electricity, water or sewage reserves.
   - **Generating usages** : To generate usages of the plot based on demands by the real estate agents and  clients.
 
 
 ### Ideation 
-[Link to presentation](https://github.com/deluminators/Realate/blob/main/Realate_PitchDeck.pdf)
+[Link to Pitch Deck](https://github.com/deluminators/Realate/blob/main/Realate_PitchDeck.pdf)
 
 ### Tech-Stack
 
@@ -32,9 +31,13 @@ Realate uses a number of open source projects:
 * [ONNX](https://onnx.ai/) - for integrating PyTorch models into web
 
 
-### Todos
+### Future Plan
 
  - Add GANs generated blueprints for construction on land site
+ - Dynamic Pricing model for predicting real time price predictions based on demand and availability.
+ - Implementing bridge with nearby sources for particular usages of tools.
+ - Implementing better Road Segmentation models for better optimal usage functionality.
+ - Implementing real-time deployment with added security. 
 
 ### Demos
 - [Demo 1](https://github.com/deluminators/Realate/blob/main/land_utils/demo1.ipynb)
