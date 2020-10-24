@@ -1,12 +1,15 @@
 .imageContainer {
-  width: 50%;
-  height: 400px;
+  width: 25%;
+  height: 200px;
   margin: 10px auto;
 }
 
 .contain {
-  background-image: url('https://thumbs.dreamstime.com/b/overview-arid-barren-land-drone-view-mountain-area-lush-green-fields-141141240.jpg');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-eCnVXLzTJp1cENMrsiVZ79MJ1Hh1xA4QDg&usqp=CAU');
   width: 100%;
-  height: 100%;
-  opacity: 0.5;
+  height: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
 }

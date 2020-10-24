@@ -18,11 +18,12 @@ const UploadImage = (props) => {
         }
       }
     return <div style={{width:'100%',minHeight:'100vh'}}>
+      <div style={{color:'white',fontSize: 'calc(10px + 2vmin)'}}>Upload aerial view of the land</div>
         <div className={Styles.imageContainer}>
-            {image?<img src={image} style={{width:'100%',height:'100%'}} />:<div className={Styles.contain}><h3>Choosen image will appear here!</h3></div>}
+            {image?<img src={image} style={{width:'100%',height:'100%',}} />:<div className={Styles.contain}><h3>Choosen image will appear here!</h3></div>}
         </div>
-        <input type='file' onChange={ onImageChange} />
-        <Button style={{backgroundColor:'green'}} title="submit" onClick={() => props.handler(file)}>Upload</Button>
+        <input style={{color:'wheat'}} type='file' onChange={ onImageChange} />
+        <Button style={{backgroundColor:'#61DBFB'}} title="submit" onClick={() => props.handler(file)}>Upload</Button>
     </div>
 }
 

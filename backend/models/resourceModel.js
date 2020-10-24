@@ -27,6 +27,9 @@ const resourceSchema = new Schema({
   },
   plato:{
     type:String,
+  },
+  selectedFile:{
+    type:String
   }
 });
 
