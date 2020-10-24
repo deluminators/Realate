@@ -25,7 +25,7 @@ const FormComponent = () => {
         {/* <div style={{backgroundColor:'white'}}> */}
         <Form className={Styles.Form} layout='vertical' form={form} >
           
-            <Form.Item label='Select required building types'>
+            <Form.Item label={<p style={{color:'white'}}>Select required building</p>} >
             <CheckboxGroup
                 options={['Single room flat', '2 BHK', '3 BHK','Duplex','Bunglow','Community Hall']}
                 value={buildingList}
@@ -33,14 +33,14 @@ const FormComponent = () => {
              />
             </Form.Item>
             {buildingList.map(el => {
-                return <Form.Item label={`no. of ${el}`}>
+                return <Form.Item label={<p style={{color:'white'}}>no. of {el}</p>}>
                 <Input placeholder='total no.s' 
                 onChange={e => console.log(e.target.value)} 
                 />
             </Form.Item>
             })}
             {fields.map(el => {
-                return   <Form.Item label={`${el} Area`}>
+                return   <Form.Item label={<p style={{color:'white'}}>{el} Area</p>}>
                 <Input placeholder='in square meters' 
                 onChange={e => console.log(e.target.value)} 
                 />

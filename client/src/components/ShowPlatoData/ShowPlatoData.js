@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React,{useState,useEffect} from 'react';
 import Config from '../../assets/config';
+import Spinner from '../Spinner/Spinner';
 
 const ShowPlatoData = (props) => {
     const [loading,setLoading] = useState(true)
@@ -11,14 +12,14 @@ const ShowPlatoData = (props) => {
       'Converting data to visual mode...',
     ];
     const get = async () => {
-      const resp =await Axios.get(`${Config.LINK}/resource/${props.data._id}`);
-      console.log(resp);
-      setImage(resp.data.resource.plato);
+      // const resp =await Axios.get(`${Config.LINK}/resource/${props.data._id}`);
+      // console.log(resp);
+      setImage(props.data[props.imageName][0]);
     }
     useEffect(() => {
       const timeout = setTimeout(() => {
         setLoading(false);
-      }, 6000);
+      }, 8000);
       let i = 0;
       let j = 0;
       const interval = setInterval(() => {
@@ -43,7 +44,7 @@ const ShowPlatoData = (props) => {
       };
     }, [props.data]);
 
-return <div style={{width:'100%',minHeight:'100vh',color:'white',fontSize:18}}>{loading?text:<img style={{width:'200px',height:'200px'}} src={`${Config.LINK}${image}`}></img>}</div>
+return <div style={{width:'100%',minHeight:'100vh',color:'white',fontSize:18}}>{loading?<>{text}<Spinner /></>:<img style={{width:'200px',height:'200px'}} src={image}></img>}</div>
 }
 
 export default ShowPlatoData;
