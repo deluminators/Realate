@@ -10,7 +10,14 @@ A roboust application providing support for predicting and detecting land qualit
   - **Optimal usage** : Optimal usage of land for predicting the maximum number of flats and bunglows possible to fit into a chosen plot.
   - **External supplies** : Finding optimized path for external supplies like electricity, water or sewage reserves.
   - **Generating usages** : To generate usages of the plot based on demands by the real estate agents and  clients.
-
+  
+  
+# Implementation
+1. For finding the land cover and usage we plan to use the Resnet50 Architecture and for finding the water bodies nearby we use the CVT Threshold feature of the OpenCV Library.
+2. For optimal usage of land for predicting the maximum number of flats and bunglows, we are at finding the road segmented image to find usable area, and then recursively try to fit rectangles on the usable area to maximise the number of flats, bunglows and duplexes.
+3. For finding the optimal and best route between two points in an aerial image we aim to use the Djikstra Algorithm in the road segmented image of the satellite imagery with an added algorithm which ignores the region with black pixels and finds the best path among the white pixels.
+4. We plan to use Generative Adverserial Networks for generating best plot plan of the chosen area for giving a complete finish plan to the real-estate agents.  
+  
 
 ### Ideation 
 [Link to Pitch Deck](https://github.com/deluminators/Realate/blob/main/Realate_PitchDeck.pdf)
@@ -37,7 +44,8 @@ Realate uses a number of open source projects:
  - Dynamic Pricing model for predicting real time price predictions based on demand and availability.
  - Implementing bridge with nearby sources for particular usages of tools.
  - Implementing better Road Segmentation models for better optimal usage functionality.
- - Implementing real-time deployment with added security. 
+ - Implementing real-time deployment with added security.
+ - Usage of A-Star or better algorithms in finding the best optimal path between the source and reserves.
 
 ### Demos
 - [Demo 1](https://github.com/deluminators/Realate/blob/main/land_utils/demo1.ipynb)
