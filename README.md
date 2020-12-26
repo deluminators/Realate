@@ -2,7 +2,7 @@
 
 ##### _real-time real-estate data prediction & analysis_
 
-A roboust application providing support for predicting and detecting land quality & cover, its optimal usage  for building flats or property, its generative model and  optimal paths to electric/water/sewage reserve.
+A robust application providing support for predicting and detecting land quality & cover, its optimal usage  for building flats or property, its generative model and  optimal paths to electric/water/sewage reserve.
 
 # Features
 
