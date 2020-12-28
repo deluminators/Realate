@@ -4,6 +4,8 @@
 
 A robust application providing support for predicting and detecting land quality & cover, its optimal usage  for building flats or property, its generative model and  optimal paths to electric/water/sewage reserve.
 
+** Contributing rules are mentioned in <a href="https://github.com/deluminators/Realate/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> file.**
+
 # Features
 
   - **Land Cover** : Real estate agents find int difficult to predict and  determine the land quality and optimal cover.
