@@ -6,6 +6,7 @@
 - Preferably, you cannot work on any issue that is not assigned to you.
 - In case you want to submit an improvement to an existing feature or section, we prefer that you notify us in suggested medium of contact, describing in details your improvement. This will help others to analyze your contribution.
 - All PRs must be made from a Branch. Create a separate branch for every Issue you are working upon and once found fit, make a PR.
+- Read the [Code of Conduct](https://github.com/deluminators/Realate/blob/main/CODE_OF_CONDUCT.md).
 - If you have no idea what are [issues](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/about-issues) or [PR](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests)s, please do refer to the links.
 - U need to make a branch and submit the pr always. Don't send pull requests to main branch.
 - Difficulties of issues are divided into 5 levels:- Level-1(For minor documentation work), Level-2(For Wiki or Major Documentation work), Level-3(Minor Bug fixes), Level-4(Implementing new features) and Level-5(Major Contribution, Adding multiple Features etc.).
