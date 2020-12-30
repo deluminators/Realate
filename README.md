@@ -4,7 +4,6 @@
 
 A robust application providing support for predicting and detecting land quality & cover, its optimal usage  for building flats or property, its generative model and  optimal paths to electric/water/sewage reserve.
 
-** Contributing rules are mentioned in <a href="https://github.com/deluminators/Realate/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> file.**
 
 # Features
 
@@ -94,6 +93,13 @@ npm start
 ```
 
 A react app will be running on your browser on port 3000.
+
+## Contributions
+Contributing rules are mentioned in <a href="https://github.com/deluminators/Realate/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> file.  
+For existing bugs and adding more features open a issue [here](https://github.com/deluminators/Matix/issues)
+
+## Discussions
+Pitch new ideas, suggestions and contribute in developing the project! Participate in the discussions [here](https://github.com/deluminators/Realate/discussions)
 
 License
 ----
