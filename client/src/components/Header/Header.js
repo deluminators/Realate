@@ -21,7 +21,7 @@ function Header() {
             path: "/sign-in"
         },
         {
-            name: "Sign-up",
+            name: "Sign up",
             path: "/sign-up"
         }
     ]
