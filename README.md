@@ -103,12 +103,19 @@ For existing bugs and adding more features open a issue [here](https://github.co
 
 - ### Script Winter of Code(SWoC)
 
-  **Script Winter of Code** is an open-source program envisioned by the **Script Foundation**. It aims to bring students into the world of open source development and see the power of unified problem-solving in real time.
-  ![SWoC-Logo](https://media-exp1.licdn.com/dms/image/C560BAQGh8hr-FgbrHw/company-logo_200_200/0/1602422883512?e=2159024400&v=beta&t=s8IX2pN1J2v5SRRbgzVNzxnQ2rWeeMq2Xb__BYW60qE)
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+  <p>
+  <strong>Script Winter of Code</strong> is an open-source program envisioned by the <strong>Script Foundation</strong>. It aims to bring students into the world of open source development and see the power of unified problem-solving in real time.</p>
+
+  <img src="https://media-exp1.licdn.com/dms/image/C560BAQGh8hr-FgbrHw/company-logo_200_200/0/1602422883512?e=2159024400&v=beta&t=s8IX2pN1J2v5SRRbgzVNzxnQ2rWeeMq2Xb__BYW60qE" style="margin-bottom: 3%;">
+  </div>
 
 - ### DevScript Winter of Code(DWoC)
-  **Winter of Code** is an open-source program envisioned by **DevScript** that helps understand the paradigm of Open Source contribution. It aims to bring students into the world of open source development and see the power of unified problem solving in real time.
-  ![DevScript-Logo](https://github.com/Tejas1510/Athavani/blob/master/assets/Images/devscriptcode.png?raw=true)
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+  <p><strong>Winter of Code</strong> is an open-source program envisioned by <strong>DevScript</strong> that helps understand the paradigm of Open Source contribution. It aims to bring students into the world of open source development and see the power of unified problem solving in real time.
+  </p>
+  <img src="https://github.com/Tejas1510/Athavani/blob/master/assets/Images/devscriptcode.png?raw=true" >
+  </div>
 
 ## Discussions
 
