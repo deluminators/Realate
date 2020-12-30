@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import styles from './Header.module.css';
 
@@ -39,9 +39,11 @@ function Header() {
                 <nav className={styles.nav}>
                     {
                         navbar.map(element => (
-                            <Link className={styles.nav_links} key={element.path} to={element.path}>
+                            <NavLink className={styles.nav_links} key={element.path} to={element.path}
+                                activeClassName={styles.nav_active_link}
+                            >
                                 {element.name}
-                            </Link>
+                            </NavLink>
                         ))
                     }
                 </nav>
@@ -52,9 +54,11 @@ function Header() {
             <nav className={styles.mobile_nav} style={{ right: `${mobileNav ? '0' : '-3000px'}` }}>
                 {
                     navbar.map(element => (
-                        <div className={styles.mobile_nav_links} key={element.path}>
+                        <NavLink className={styles.mobile_nav_links} key={element.path} to={element.path}
+                            activeClassName="mobile-nav-active-link"
+                        >
                             {element.name}
-                        </div>
+                        </NavLink>
                     ))
                 }
             </nav>

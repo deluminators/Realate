@@ -36,7 +36,8 @@
   text-decoration: none;
 }
 
-.nav_links:hover {
+.nav_links:hover,
+.nav_active_link {
   background-color: whitesmoke;
   box-shadow: 1px 2px 5px skyblue;
 }
@@ -54,7 +55,6 @@
   width: 100%;
   display: flex;
   background-color: #010033;
-  color: #00acff;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
@@ -70,9 +70,12 @@
   margin: 0.5rem;
   border-radius: 50px;
   transition: all 0.5s ease;
+  color: #00acff;
+  text-decoration: none;
 }
 
-.mobile_nav_links:hover {
+.mobile_nav_links:hover,
+.mobile_nav_active_link {
   background-color: whitesmoke;
   box-shadow: 1px 2px 5px skyblue;
 }
