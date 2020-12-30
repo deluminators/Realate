@@ -7,7 +7,7 @@ A robust application providing support for predicting and detecting land quality
 
 # Features
 
-  - **Land Cover** : Real estate agents find int difficult to predict and  determine the land quality and optimal cover.
+  - **Land Cover** : Real estate agents find it difficult to predict and  determine the land quality and optimal cover.
   - **Optimal usage** : Optimal usage of land for predicting the maximum number of flats and bunglows possible to fit into a chosen plot.
   - **External supplies** : Finding optimized path for external supplies like electricity, water or sewage reserves.
   - **Generating usages** : To generate usages of the plot based on demands by the real estate agents and  clients.
