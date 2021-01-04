@@ -35,6 +35,10 @@ const userSchema = new Schema({
     address: {
         type: String,
         required: [true, 'Address is Required']
+    },
+    createdOn: {
+        type: Date,
+        default: Date.now
     }
 });
 
