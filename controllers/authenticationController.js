@@ -2,43 +2,27 @@ const User = require('../models/createModel');
 const catchAsync = require('../utils/catchAsync');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const AppError = require('../utils/appError');
 
 exports.signup = catchAsync(async (req, res, next) => {
     console.log(req.body);
 
     const { name, password, email, mobile, address } = req.body;
 
-    bcrypt.hash(password, 12, async function (err, hash) {
+    const hash = await bcrypt.hash(password, 12);
 
-        if (err) {
-            return res.status(403).json({
-                status: 'error',
-                error: err,
-                message: err.message
-            });
-        }
+    const user = await User.create({
+        name,
+        password: hash,
+        email,
+        mobile,
+        address
+    });
 
-        const user = await User.create({
-            name,
-            password: hash,
-            email,
-            mobile,
-            address
-        },
-            function (err, model) {
-                if (err) {
-                    return res.status(403).json({
-                        status: 'error',
-                        error: err,
-                        message: err.message
-                    });
-                }
-                delete model._doc.password;
-                return res.status(200).json({
-                    status: 'success',
-                    data: model
-                });
-            });
+    delete user._doc.password;
+    return res.status(200).json({
+        status: 'success',
+        data: user
     });
 });
 
@@ -47,51 +31,24 @@ exports.login = catchAsync(async (req, res, next) => {
 
     const { email, password } = req.body;
 
-    User.findOne({ email: email }, function (err, model) {
-        if (err) {
-            console.log(err);
-            return res.status(403).json({
-                status: 'error',
-                error: err,
-                message: err.message
-            });
-        }
-        console.log(model)
+    const user = await User.findOne({ email: email });
 
-        if (model) {
-            bcrypt.compare(password, model.password)
-                .then(matched => {
-                    if (matched) {
-                        const token = jwt.sign({ _id: model._id }, process.env.JWT_KEY);
-                        delete model._doc.password;
-                        return res.status(200).json({
-                            token,
-                            status: 'success',
-                            user: {
-                                ...model._doc
-                            },
-                            message: "Successfully Logged In"
-                        });
-                    } else {
-                        return res.status(403).json({
-                            status: 'error',
-                            error: "User Found but Password is wrong",
-                            message: "Invalid Email or Password"
-                        });
-                    }
-                }).catch(err => {
-                    return res.status(400).json({
-                        status: 'error',
-                        error: "Something wrong! Maybe password is null, or JWT_KEY is null",
-                        message: err.message
-                    });
-                });
-        } else {
-            return res.status(404).json({
-                status: 'error',
-                error: "No User Found with entered Email",
-                message: "Invalid Email or Password"
-            });
-        }
-    })
+    if (!user) {
+        return next(new AppError(`No User Found with email: ${email}`));
+    }
+
+    const matched = await bcrypt.compare(password, user.password);
+
+    if (!matched) {
+        return next(new AppError('Invalid Email or Password!'));
+    }
+
+    const token = jwt.sign({ _id: user._id }, process.env.JWT_KEY);
+    delete user._doc.password;
+    return res.status(200).json({
+        token,
+        status: 'success',
+        user,
+        message: "Successfully Logged In"
+    });
 });
