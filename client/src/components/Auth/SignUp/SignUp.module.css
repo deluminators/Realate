@@ -68,3 +68,15 @@
 .link:hover {
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 630px) {
+
+    .SignUp {
+        padding: 1rem;
+    }
+
+    .body input {
+        width: 250px;
+        font-size: 1rem;
+    }    
+}

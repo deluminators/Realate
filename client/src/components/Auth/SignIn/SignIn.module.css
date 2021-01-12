@@ -127,3 +127,15 @@
 .link:hover {
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 630px) {
+
+    .SignIn {
+        padding: 1rem;
+    }
+
+    .email, .password {
+        width: 250px;
+        font-size: 1rem;
+    }    
+}
