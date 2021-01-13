@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {toast} from 'react-toastify';
 import styles from './SignUp.module.css';
-import * as validator from '../../utils/validator';
+import * as validator from '../../../utils/validator';
 
 function SignUp() {
 
