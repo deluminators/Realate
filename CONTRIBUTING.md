@@ -11,8 +11,8 @@
 - U need to make a branch and submit the pr always. Don't send pull requests to main branch.
 - Difficulties of issues are divided into 5 levels:- Level-1(For minor documentation work), Level-2(For Wiki or Major Documentation work), Level-3(Minor Bug fixes), Level-4(Implementing new features) and Level-5(Major Contribution, Adding multiple Features etc.).
 **Make sure your code works before submitting it :D**
-**All PRs will be done to development branch not main branch. Always build on work done on development branch.**
-
+**All PRs will be done to development branch not main branch. Always build on work done on development branch.**  
+- While requesting for posting new issue, have a considerable plan and amount for contribution. 
 <details>
 
 <summary>
