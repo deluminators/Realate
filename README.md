@@ -1,11 +1,16 @@
 <h1 align = "center" >Realate </h1>
  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp; 
-[![Stargazers](https://img.shields.io/github/stars/deluminators/Realate?style=for-the-badge)](https://github.com//thinktocode/GitFit/stargazers)
-[![Issues](https://img.shields.io/github/issues/deluminators/Realate?style=for-the-badge)](https://github.com/thinktocode/GitFit/issues)
-[![Contributors](https://img.shields.io/github/contributors/deluminators/Realate?style=for-the-badge)](https://img.shields.io/github/contributors/thinktocode/GitFit)
-[![Forks](https://img.shields.io/github/forks/deluminators/Realate?style=for-the-badge)](https://github.com//thinktocode/GitFit/network/members)
-[![Pull Request](https://img.shields.io/github/issues-pr/deluminators/Realate?style=for-the-badge)](https://github.com/thinktocode/COVID-19-Tracker/pulls)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+[![Stargazers](https://img.shields.io/github/stars/deluminators/Realate)](https://github.com//deluminators/Realate/stargazers)
+[![Issues](https://img.shields.io/github/issues/deluminators/Realate)](https://github.com/deluminators/Realate/issues)
+[![Contributors](https://img.shields.io/github/contributors/deluminators/Realate)](https://img.shields.io/github/contributors/deluminators/Realate)
+[![Forks](https://img.shields.io/github/forks/deluminators/Realate)](https://github.com//deluminators/Realate/network/members)
+[![Pull Request](https://img.shields.io/github/issues-pr/deluminators/Realate)](https://github.com/deluminators/Realate/pulls)
+[![Contributors](https://img.shields.io/github/contributors/deluminators/Realate)](https://img.shields.io/github/contributors/deluminators/Realate)
+[![Top Language](https://img.shields.io/github/languages/top/deluminators/Realate)](https://github.com/deluminators/Realate)
+
+
+
 
 ##### _real-time real-estate data prediction & analysis_
 
