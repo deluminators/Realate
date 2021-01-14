@@ -1,7 +1,5 @@
 <h1 align = "center" >Realate </h1>
  
-
-&nbsp;&nbsp;
 [![Stargazers](https://img.shields.io/github/stars/deluminators/Realate?style=for-the-badge)](https://github.com//thinktocode/GitFit/stargazers)
 [![Issues](https://img.shields.io/github/issues/deluminators/Realate?style=for-the-badge)](https://github.com/thinktocode/GitFit/issues)
 [![Contributors](https://img.shields.io/github/contributors/deluminators/Realate?style=for-the-badge)](https://img.shields.io/github/contributors/thinktocode/GitFit)
