@@ -9,6 +9,7 @@
   padding: 0rem 3rem;
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .logo {
@@ -60,6 +61,7 @@
   justify-content: space-evenly;
   cursor: pointer;
   transition: all 0.5s ease;
+  z-index: 999;
 }
 
 .mobile_nav_links {
