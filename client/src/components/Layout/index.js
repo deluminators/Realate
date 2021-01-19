@@ -5,9 +5,7 @@ export const Layout = (props) => {
 
     return (
         <section className={styles.container}>
-           <div className={styles.shadow}>
-                {props.children}
-           </div>
+            {props.children}
         </section>
     )
 };
