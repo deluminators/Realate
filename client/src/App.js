@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/Header';
 import {Layout} from './components/Layout';
+import SignIn from './components/Auth/SignIn/SignIn';
 
 function App() {
 
@@ -12,10 +13,10 @@ function App() {
   return (
     <div className="App">
     <Router>
-      <Header />
       <Layout >
+        <Header />
         {
-          //Add Components here
+          //Add More Components here
         }
       </Layout>
     </Router>
