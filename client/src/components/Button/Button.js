@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Button.module.css';
 
-function Button(props) {
+function Button({style, onClick, title}) {
     return (
-        <button className={`${styles.Button} ${props.style}`} onClick={props.onClick}>
-            {props.title}
+        <button className={`${styles.Button} ${style}`} onClick={onClick}>
+            {title}
         </button>
     )
 }
