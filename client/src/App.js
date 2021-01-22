@@ -3,8 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/Header';
-import {Layout} from './components/Layout';
-import SignIn from './components/Auth/SignIn/SignIn';
+import Layout from './components/Layout/Layout';
 
 function App() {
 
