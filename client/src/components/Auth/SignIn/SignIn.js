@@ -5,6 +5,7 @@ import styles from './SignIn.module.css';
 import fb from './fb.png';
 import gog from './gog.png';
 import * as validator from '../../../utils/validator';
+import Button from '../../Button/Button';
 
 function SignIn() {
 
@@ -51,9 +52,7 @@ function SignIn() {
                     </div>
                 </div>
                 <div className={styles.forgot}>Forgot your password?</div>
-                <button className={styles.login}
-                    onClick={submitHandle}
-                >Log In</button>
+                <Button title="Log In" onClick={submitHandle} style={styles.login}/>
                 <div className={styles.or}>Or login using</div>
                 <div className={styles.fb_gog}>
                     <div className={styles.fb}>

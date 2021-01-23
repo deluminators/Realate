@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {toast} from 'react-toastify';
 import styles from './SignUp.module.css';
 import * as validator from '../../../utils/validator';
+import Button from '../../Button/Button';
 
 function SignUp() {
 
@@ -72,9 +73,7 @@ function SignUp() {
                 <input type="password" name="password2" placeholder="Confirm Password"
                     value={password2} onChange={(e) => setPassword2(e.target.value)}
                 />
-                <button className={styles.signup}
-                    onClick={submitHandle}
-                >Sign Up</button>
+                <Button title="Sign Up" style={styles.signup} onClick={submitHandle}/>
                 <div className={styles.already}>
                     <div className={styles.text}>Already have an account?</div>
                     <div className={styles.link}>Sign In</div>
