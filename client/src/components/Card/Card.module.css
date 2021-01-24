@@ -1,0 +1,18 @@
+.title {
+    font-size: 25px;
+    background-color: black;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: -5px;
+    color:white;
+}
+
+.details { 
+    width: 100%;
+    font-size: 20px;
+    border: black;
+    cursor: pointer;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
