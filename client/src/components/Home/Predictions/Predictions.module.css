@@ -1,0 +1,42 @@
+.Predictions {
+    padding: 0 4rem;
+    color: white;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.content {
+    color: #A3B1FF;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 9px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.prediction_card_array {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+@media only screen and (min-width: 781px) and (max-width: 1170px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 781px) {
+    .title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .content {
+        font-size: 1rem;
+        margin: auto;
+        margin-top: 5px;
+    }
+}
