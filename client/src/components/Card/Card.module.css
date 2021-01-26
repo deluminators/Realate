@@ -1,18 +1,46 @@
-.title {
-    font-size: 25px;
-    background-color: black;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-top: -5px;
-    color:white;
+.container img, .details{
+    min-width: 22%;
 }
 
-.details { 
+.container .details{
+    margin-top: -5px;
+}
+
+.title {
+    font-size: 2.3rem;
+    background-color: black;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color:white;
+    font-family: Montserrat;
+    font-weight:500
+}
+
+.cardButton { 
     width: 100%;
-    font-size: 20px;
+    font-size: 1.5rem;
     border: black;
     cursor: pointer;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
 }
+
+@media only screen and (max-width: 630px) {
+    .container img, .details{
+        min-width: 50%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+    
+    .cardButton { 
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+  
+  }

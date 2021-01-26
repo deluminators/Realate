@@ -4,15 +4,15 @@ import Button from '../Button/Button';
 
 function PredictionCard(props) {
 
-    const {location, imgSrc, styles, width = '30%', id, onDetailsClick} = props;
+    const {location = '', imgSrc, styles, width = '30%', id, onDetailsClick} = props;
     return (
-        <>
-            <img src={imgSrc} style={styles} width={width} id={id} alt={`${location ? location : ''} Map`}/>
-            <div style={{width}}>
+        <section className={cardStyles.container}>
+            <img src={imgSrc} style={styles} width={width} id={id} alt={`${location} Map`}/>
+            <div className={cardStyles.details} style={{width}}>
                 {location && <h1 className={cardStyles.title}>{location}</h1>}
-                <Button title="Show Details" onClick={onDetailsClick} style={cardStyles.details}/>
+                <Button title="Show Details" onClick={onDetailsClick} style={cardStyles.cardButton}/>
             </div>
-        </>
+        </section>
     );
 }
 
