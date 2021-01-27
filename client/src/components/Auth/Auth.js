@@ -4,7 +4,7 @@ import SignIn from './SignIn/SignIn';
 import SignUp from './SignUp/SignUp';
 import Logo from '../../assets/Logo.png';
 
-function Auth({option = false}) {
+function Auth({option = true}) {
     return (
         <div className={styles.Auth}>
             <div className={styles.left}>
