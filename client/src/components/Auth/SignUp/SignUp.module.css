@@ -67,14 +67,41 @@
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (min-width: 320px) and (max-width: 630px) {
 
     .SignUp {
         padding: 1rem;
     }
 
+    .title {
+        text-align: center;
+    }
+
+    .body {
+        padding: 0.7rem;
+    }
+
     .body input {
         width: 250px;
+        font-size: 1rem;
+    }    
+}
+
+@media only screen and (max-width:320px) {
+    .SignUp {
+        padding: 1rem;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .body {
+        padding: 0.1rem;
+    }
+
+    .body input {
+        width: 230px;
         font-size: 1rem;
     }    
 }

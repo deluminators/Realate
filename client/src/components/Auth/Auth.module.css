@@ -1,0 +1,66 @@
+.Auth {
+    display: flex;
+    padding-top: 3rem;
+}
+
+.left {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5rem;
+    text-align: center;
+    padding-top: 3rem;
+    width: 50%;
+}
+
+.logo {
+    width: 120px;
+    object-fit: contain;
+    margin: 1rem 0;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.content {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.right {
+    width: 50%;
+}
+
+@media only screen and (max-width: 970px) {
+    .Auth {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    .left {
+        width: 100%;
+        padding: 0 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .title {
+        font-size: 1.7rem;
+    }
+
+    .content {
+        font-size: 1.2rem;
+    }
+
+    .right {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+}
