@@ -39,7 +39,7 @@ function Header() {
                 <nav className={styles.nav}>
                     {
                         navbar.map(element => (
-                            <NavLink className={styles.nav_links} key={element.path} to={element.path}
+                            <NavLink className={styles.nav_links} key={element.path} to={element.path} exact
                                 activeClassName={styles.nav_active_link}
                             >
                                 {element.name}

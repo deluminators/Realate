@@ -1,10 +1,8 @@
 import React from 'react';
 import styles from './Auth.module.css';
-import SignIn from './SignIn/SignIn';
-import SignUp from './SignUp/SignUp';
 import Logo from '../../assets/Logo.png';
 
-function Auth({option = true}) {
+function Auth({children}) {
     return (
         <div className={styles.Auth}>
             <div className={styles.left}>
@@ -14,10 +12,7 @@ function Auth({option = true}) {
             </div>
             <div className={styles.right}>
                 {
-                    option ?
-                    <SignIn />
-                    :
-                    <SignUp />
+                    children
                 }
             </div>
         </div>
