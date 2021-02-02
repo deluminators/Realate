@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import {FiEye, FiEyeOff} from 'react-icons/fi';
 import {toast} from 'react-toastify';
 import styles from './SignIn.module.css';
@@ -66,7 +67,7 @@ function SignIn() {
                 </div>
                 <div className={styles.already}>
                     <div className={styles.text}>New to Realate?</div>
-                    <div className={styles.link}>Sign Up</div>
+                    <Link className={styles.link} to='/sign-up'>Sign Up</Link>
                 </div>
             </div>
         </div>

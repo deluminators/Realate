@@ -121,20 +121,48 @@
     margin-left: 11px;
     font-size: 1.1rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .link:hover {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (min-width: 320px) and (max-width: 630px) {
 
     .SignIn {
         padding: 1rem;
     }
 
+    .title {
+        text-align: center;
+    }
+
+    .body {
+        padding: 0.7rem;
+    }
+
     .email, .password {
         width: 250px;
+        font-size: 1rem;
+    }    
+}
+
+@media only screen and (max-width:320px) {
+    .SignIn {
+        padding: 1rem;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .body {
+        padding: 0.1rem;
+    }
+
+    .email, .password {
+        width: 230px;
         font-size: 1rem;
     }    
 }

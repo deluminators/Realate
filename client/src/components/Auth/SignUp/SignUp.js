@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import {toast} from 'react-toastify';
 import styles from './SignUp.module.css';
 import * as validator from '../../../utils/validator';
@@ -76,7 +77,7 @@ function SignUp() {
                 <Button title="Sign Up" style={styles.signup} onClick={submitHandle}/>
                 <div className={styles.already}>
                     <div className={styles.text}>Already have an account?</div>
-                    <div className={styles.link}>Sign In</div>
+                    <Link className={styles.link} to='/sign-in'>Sign In</Link>
                 </div>
             </div>
         </div>
