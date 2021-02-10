@@ -1,5 +1,5 @@
 .Predictions {
-    padding: 0 4rem;
+    padding: 0 3.5rem;
     color: white;
 }
 
@@ -19,7 +19,8 @@
 
 .prediction_card_array {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 1rem 0;
 }
 
@@ -30,6 +31,9 @@
 }
 
 @media only screen and (max-width: 781px) {
+    .Predictions {
+        padding: 0 1rem;
+    }
     .title {
         font-size: 1.5rem;
         text-align: center;

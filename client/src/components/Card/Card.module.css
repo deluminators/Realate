@@ -1,46 +1,44 @@
-.container img, .details{
-    min-width: 22%;
-}
-
-.container .details{
-    margin-top: -5px;
-}
-
-.title {
-    font-size: 2.3rem;
-    background-color: black;
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color:white;
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    margin: 1rem 2rem;
     font-family: Montserrat;
-    font-weight:500
 }
 
-.cardButton { 
+.details h1 {
+    background-color: black;
+    font-weight: normal;
+    font-size: 1.7rem;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+.button {
     width: 100%;
-    font-size: 1.5rem;
-    border: black;
+    padding: 0.7rem 0.3rem;
+    font-size: 1.3rem;
+    font-weight: normal;
     cursor: pointer;
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
+    outline: none;
+    border: none;
 }
 
-@media only screen and (max-width: 630px) {
-    .container img, .details{
-        min-width: 50%;
+.button:hover {
+    filter: brightness(97%);
+}
+
+@media only screen and (max-width: 1000px) {
+    .card {
+        width: 270px;
+        margin: 1rem;
     }
 
-    .title {
-        font-size: 1.5rem;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
+    .details h1{
+        font-size: 1.3rem;
     }
-    
-    .cardButton { 
-        font-size: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+
+    .button {
+        font-size: 1.1rem;
     }
-  
-  }
+}
