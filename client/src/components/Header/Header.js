@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
 import styles from './Header.module.css';
 
 function Header() {
@@ -9,12 +10,12 @@ function Header() {
 
     const navbar = [
         {
-            name: "About Us",
-            path: "/about-us"
+            name: "Home",
+            path: "/"
         },
         {
-            name: "Contact Us",
-            path: "/contact-us"
+            name: "About Us",
+            path: "/about-us"
         },
         {
             name: "Sign In",
@@ -48,20 +49,28 @@ function Header() {
                     }
                 </nav>
                 <div className={styles.hamburger} onClick={toggleMobileNav}>
-                    <GiHamburgerMenu />
+                    {
+                        mobileNav ?
+                        <AiOutlineClose />
+                        :
+                        <GiHamburgerMenu />
+                    }
                 </div>
             </header >
-            <nav className={styles.mobile_nav} style={{ right: `${mobileNav ? '0' : '-3000px'}` }}>
-                {
-                    navbar.map(element => (
-                        <NavLink className={styles.mobile_nav_links} key={element.path} to={element.path}
-                            activeClassName="mobile-nav-active-link"
-                        >
-                            {element.name}
-                        </NavLink>
-                    ))
-                }
-            </nav>
+            {
+                mobileNav &&
+                <nav className={styles.mobile_nav}>
+                    {
+                        navbar.map(element => (
+                            <NavLink className={styles.nav_links} key={element.path} to={element.path} exact
+                                activeClassName={styles.nav_active_link}
+                            >
+                                {element.name}
+                            </NavLink>
+                        ))
+                    }
+                </nav>
+            }
         </>
     )
 }
