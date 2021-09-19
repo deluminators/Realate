@@ -1,0 +1,4 @@
+tensorflow
+pytorch
+gitpython
+opencv-python
