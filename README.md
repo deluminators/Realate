@@ -1,5 +1,6 @@
-<h1 align = "center" >Realate </h1>
- 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://i.ibb.co/jTJnkH3/Blue-and-Purple-Casual-Corporate-App-Development-Startup-Company-Logo-removebg-preview-1.png" alt="Blue-and-Purple-Casual-Corporate-App-Development-Startup-Company-Logo-removebg-preview-1" border="0">
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Stargazers](https://img.shields.io/github/stars/deluminators/Realate)](https://github.com//deluminators/Realate/stargazers)
 [![Issues](https://img.shields.io/github/issues/deluminators/Realate)](https://github.com/deluminators/Realate/issues)
@@ -12,67 +13,55 @@
 
 
 
-##### _real-time real-estate data prediction & analysis_
+##### _real-estate data prediction & analysis_
 
 A robust application providing support for predicting and detecting land quality & cover, its optimal usage for building flats or property, its generative model and optimal paths to electric/water/sewage reserve.
 
 # Features
 
 - **Land Cover** : Real estate agents find it difficult to predict and determine the land quality and optimal cover.
-- **Optimal usage** : Optimal usage of land for predicting the maximum number of flats and bunglows possible to fit into a chosen plot.
 - **External supplies** : Finding optimized path for external supplies like electricity, water or sewage reserves.
-- **Generating usages** : To generate usages of the plot based on demands by the real estate agents and clients.
+- **Optimal usage** : [COMING SOON] Optimal usage of land for predicting the maximum number of flats and bunglows possible to fit into a chosen plot.
+- **Generating usages** : [UNDER EXPERIMENATION] To generate usages of the plot based on demands by the real estate agents and clients.
 
 # Implementation
 
-1. For finding the land cover and usage we plan to use the Resnet50 Architecture and for finding the water bodies nearby we use the CVT Threshold feature of the OpenCV Library.
-2. For optimal usage of land for predicting the maximum number of flats and bunglows, we are at finding the road segmented image to find usable area, and then recursively try to fit rectangles on the usable area to maximise the number of flats, bunglows and duplexes.
-3. For finding the optimal and best route between two points in an aerial image we aim to use the Djikstra Algorithm in the road segmented image of the satellite imagery with an added algorithm which ignores the region with black pixels and finds the best path among the white pixels.
+1. For classifying the land cover and usage the Resnet50 Architecture along with OpenCV's CVT Threshold.
+2. For finding the land cover, semantic segmenation of Land is performed on aerial images for masking the image to suitable classes.
+3. For finding the optimal and best route between two points in an aerial image we use the Djikstra Algorithm in the road segmented image of the satellite imagery with an added algorithm which ignores the region with black pixels and finds the best path among the white pixels.
 4. We plan to use Generative Adverserial Networks for generating best plot plan of the chosen area for giving a complete finish plan to the real-estate agents.
 
-### Ideation
-
-[Link to Pitch Deck](https://github.com/deluminators/Realate/blob/main/Realate_PitchDeck.pdf)
-
-### Tech-Stack
-
-Realate uses a number of open source projects:
-
-- [React](https://reactjs.org/) - for front-end UI
-- [node.js](https://nodejs.org/) - evented I/O for the backend
-- [Express](https://expressjs.com/) - fast node.js network app framework
-- [MongoDB](https://www.mongodb.com/) - a NoSQL database program
-- [Mongoose](https://mongoosejs.com/) - ODM library for data modelling
-- [TensorFlow](https://www.tensorflow.org/) - symbolic math library for machine learning applications
-- [PyTorch](https://pytorch.org/) - Another powerful library for deep learning usage
-- [OpenCV](https://opencv.org/) - for computer vision purposes
-- [TFjs](https://www.tensorflow.org/js) - for deploying TF ML models in web
-- [ONNX](https://onnx.ai/) - for integrating PyTorch models into web
 
 ### Future Plan
 
 - Add GANs generated blueprints for construction on land site
 - Dynamic Pricing model for predicting real time price predictions based on demand and availability.
 - Implementing bridge with nearby sources for particular usages of tools.
-- Implementing better Road Segmentation models for better optimal usage functionality.
+- Implementing better Semantic Segmentation models for better optimal usage functionality.
 - Implementing real-time deployment with added security.
 - Usage of A-Star or better algorithms in finding the best optimal path between the source and reserves.
+<br>
 
-### Demos
+# Installation & Setup
 
-- [Demo 1](https://github.com/deluminators/Realate/blob/main/land_utils/demo1.ipynb)
+**Running the Machine Learning server**
+Go to root of the project, run
 
-## Prerequisties
+```
+cd ml
+```
 
-**For backend and web app**
+```
+pip install -r requirements.txt
+```
 
-- node and npm installed
+```
+python app.py
+```
 
-## Installation & Setup
+A Flask app will be running on port 8000.  
 
-A step by step series of examples that tell you how to get a development env running
-
-**To start the server**
+**Running the back-end server**  
 Go to root of the project, run
 
 ```
@@ -87,9 +76,11 @@ npm install
 npm start
 ```
 
-Server will be running on localhost on port 5000
+Server will be running on localhost on port 5000  
+  
+  
 
-**To start the web app**
+**Running the front-end server**
 Go to root of the project, run
 
 ```
@@ -105,33 +96,35 @@ npm start
 ```
 
 A react app will be running on your browser on port 3000.
+Visit http://127.0.0.1:3000/ in your browser to access the application
+
+
 
 ## Contributions
 
 Contributing rules are mentioned in <a href="https://github.com/deluminators/Realate/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> file.  
 For existing bugs and adding more features open a issue [here](https://github.com/deluminators/Matix/issues)
 
-## Open-source Programs
-
-- ### Script Winter of Code(SWoC)
-
-  <div style="display: flex; align-items: center; justify-content: space-between;">
-  <p style="width: 55%;">
-  <strong>Script Winter of Code</strong> is an open-source program envisioned by the <strong>Script Foundation</strong>. It aims to bring students into the world of open source development and see the power of unified problem-solving in real time.</p>
-
-  <img src="https://media-exp1.licdn.com/dms/image/C560BAQGh8hr-FgbrHw/company-logo_200_200/0/1602422883512?e=2159024400&v=beta&t=s8IX2pN1J2v5SRRbgzVNzxnQ2rWeeMq2Xb__BYW60qE" style="margin: 0px auto 4% auto;" >
-  </div>
-
-- ### DevScript Winter of Code(DWoC)
-  <div style="display: flex; align-items: center; justify-content: space-between;">
-  <p style="width: 55%;"><strong>Winter of Code</strong> is an open-source program envisioned by <strong>DevScript</strong> that helps understand the paradigm of Open Source contribution. It aims to bring students into the world of open source development and see the power of unified problem solving in real time.
-  </p>
-  <img src="https://github.com/Tejas1510/Athavani/blob/master/assets/Images/devscriptcode.png?raw=true" height=150 style="margin: 0 auto;">
-  </div>
 
 ## Discussions
 
 Pitch new ideas, suggestions and contribute in developing the project! Participate in the discussions [here](https://github.com/deluminators/Realate/discussions)
+
+## Project Maintainers
+
+<table>
+<tr>
+<td align="center"><a href="https://github.com/sanjibansg"><img src="https://avatars.githubusercontent.com/u/40017007?v=4" width=150px height=150px /></a></br> <h4>Sanjiban Sengupta</h4>
+<a href="https://www.linkedin.com/in/sanjiban-sengupta/"><img src="http://pngimg.com/uploads/linkedIn/linkedIn_PNG15.png" width=32px height=32px></a><a href="https://github.com/sanjibansg" style="padding:7px;"><img src="https://i.pinimg.com/originals/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.png" width=32 height=32></a></td>
+
+<td align="center"><a href="https://github.com/07souravkunda"><img src="https://media-exp1.licdn.com/dms/image/C5103AQHQLzOcQVoErg/profile-displayphoto-shrink_800_800/0/1583347930281?e=1638403200&v=beta&t=AoRRg1Q6RYqhcDZoLnbilz479MJnYPho8MM5TOWicFI" width=150px height=150px /></a></br> <h4>Sourav Kunda</h4>
+<a href="https://www.linkedin.com/in/souravkunda/"><img src="http://pngimg.com/uploads/linkedIn/linkedIn_PNG15.png" width=32px height=32px></a><a href="https://github.com/07souravkunda" style="padding:7px;"><img src="https://i.pinimg.com/originals/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.png" width=32 height=32></a></td>
+
+<td align="center"><a href="https://github.com/SanchiMittal"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQEXvY2-Ko4f0Q/profile-displayphoto-shrink_800_800/0/1617735487447?e=1638403200&v=beta&t=atAYpGSuMXen2uA0DckxewJHxoQk1ksVWITqTGCM11s" width=150px height=150px /></a></br> <h4>Sanchi Mittal</h4>
+<a href="https://www.linkedin.com/in/sanchi-mittal/"><img src="http://pngimg.com/uploads/linkedIn/linkedIn_PNG15.png" width=32px height=32px></a><a href="https://github.com/SanchiMittal" style="padding:7px;"><img src="https://i.pinimg.com/originals/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.png" width=32 height=32></a></td>
+
+</tr>
+</table>
 
 ## License
 

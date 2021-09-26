@@ -5,7 +5,7 @@ import torch
 from torchvision import transforms
 from torch.autograd import Variable
 
-model_path = "./experimentation/model.pt"
+model_path = "land_cover/experimentation/model.pt"
 
 transform = transforms.Compose([transforms.Resize(224),
                                 transforms.ToTensor()

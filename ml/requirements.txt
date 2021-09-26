@@ -1,0 +1,13 @@
+numpy
+matplotlib
+imageio
+scipy
+itertools
+Pillow==7.0.0
+albumentations
+pytorch
+opencv-python
+beautifulsoup4
+urllib
+segmentation_models_pytorch
+https://github.com/bitranox/wrapt-timeout-decorator/archive/master.zip	
