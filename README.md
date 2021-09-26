@@ -1,5 +1,6 @@
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://i.ibb.co/jTJnkH3/Blue-and-Purple-Casual-Corporate-App-Development-Startup-Company-Logo-removebg-preview-1.png" alt="Blue-and-Purple-Casual-Corporate-App-Development-Startup-Company-Logo-removebg-preview-1" border="0">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://i.ibb.co/f2j96d5/Untitled-design-removebg-preview-1.png" alt="Untitled-design-removebg-preview-1" border="0">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![Stargazers](https://img.shields.io/github/stars/deluminators/Realate)](https://github.com//deluminators/Realate/stargazers)
@@ -11,10 +12,8 @@
 [![Top Language](https://img.shields.io/github/languages/top/deluminators/Realate)](https://github.com/deluminators/Realate)
 
 
-
-
-##### _real-estate data prediction & analysis_
-
+<h5 align="center"><i>real-estate data prediction & analysis</i>
+</h5>
 A robust application providing support for predicting and detecting land quality & cover, its optimal usage for building flats or property, its generative model and optimal paths to electric/water/sewage reserve.
 
 # Features
