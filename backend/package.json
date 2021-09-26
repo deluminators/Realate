@@ -12,7 +12,7 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.9",
+    "mongoose": "^6.0.7",
     "multer": "^1.4.2",
     "nodemon": "^2.0.6",
     "uniqid": "^5.2.0"
