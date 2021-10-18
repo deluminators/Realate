@@ -10,11 +10,12 @@ def landcover(url):
    return jsonify(land_cover.predict(url))
 
 
-@app.route('/optimizedpath/predict/', methods=['GET'])
+@app.route('/optimizedpath/predict/', methods=['POST'])
 def optimizedpath():
-   url   = request.args.get('url').replace('"','')
-   start = ast.literal_eval(request.args.get('start'))
-   end   = ast.literal_eval(request.args.get('end'))
+   content = request.json
+   url   = content['url']
+   start = content['start']
+   end   = content['end']
    return jsonify(optimized_path.predict(url,start,end))
 
 if __name__ == '__main__':
