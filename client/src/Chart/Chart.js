@@ -10,30 +10,21 @@ import {
 
 import { Animation } from '@devexpress/dx-react-chart';
 
-const data = [
-  { country: 'Russia', area: 12 },
-  { country: 'Canada', area: 7 },
-  { country: 'USA', area: 7 },
-  { country: 'China', area: 7 },
-  { country: 'Brazil', area: 6 },
-  { country: 'Australia', area: 5 },
-  { country: 'India', area: 2 },
-  { country: 'Others', area: 55 },
-];
+
 export default class Demo extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      data,
+      data:[]
     };
   }
 
   factorChartData(data) {
     return Object.keys(data).map((el) => {
       return {
-        country: el,
-        area: data[el],
+        landType: el,
+        amount: data[el],
       };
     });
   }
@@ -47,8 +38,8 @@ export default class Demo extends React.PureComponent {
       <Paper>
         <Chart data={chartData}>
           <PieSeries
-            valueField='area'
-            argumentField='country'
+            valueField='amount'
+            argumentField='landType'
             label={true}
           ></PieSeries>
           <Legend
@@ -61,7 +52,6 @@ export default class Demo extends React.PureComponent {
           <Title text='Land Cover Classification' />
           <Animation />
           <Tooltip enabled={true} shared={true} />
-          {/* <Chart.Label>label</Chart.Label> */}
         </Chart>
       </Paper>
     );

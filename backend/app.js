@@ -36,7 +36,6 @@ const predictPath = async (req, res) => {
 app.use(express.json());
 app.use(
   cors({
-    // origin: "https://justrelax-ce045.firebaseapp.com",
     origin: 'http://localhost:3001',
     credentials: true,
   })
