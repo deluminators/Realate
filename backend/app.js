@@ -1,54 +1,33 @@
 const express = require('express');
+const AppError = require('./utils/appError');
+const globalErrorController = require('./controllers/globalErrorController');
 const multer = require('./utils/multer');
 const cors = require('cors');
 const path = require('path');
-const axios = require('axios');
+const resourceController = require('./controllers/resourceController');
+
 
 const app = express();
-
-const createResource = async (req, res) => {
-  try {
-    const filename = req.files[0].filename;
-    const resp = await axios.post(
-      `http://127.0.0.1:8000/landcover/predict/${filename}`
-    );
-    res.status(200).json({
-      data: resp.data,
-      imageName: filename,
-    });
-  } catch (er) {
-    console.log(er);
-  }
-};
-
-const predictPath = async (req, res) => {
-  try {
-    const resp = await axios.post(
-      `http://127.0.0.1:8000/optimizedpath/predict`,
-      req.body
-    );
-    res.send(resp.data);
-  } catch (er) {
-    console.log(er);
-  }
-};
-
 app.use(express.json());
 app.use(
-  cors({
-    origin: 'http://localhost:3001',
-    credentials: true,
-  })
-);
+    cors({
+      // origin: "https://justrelax-ce045.firebaseapp.com",
+      origin: 'http://localhost:3000',
+      credentials: true,
+  
+    })
+  );
 app.use(multer);
 
-app.post('/api/v1/resources', createResource);
-app.post('/api/v1/predict', predictPath);
+app.post('/api/v1/resources', resourceController.createResource);
+app.get('/api/v1/resource/:id',resourceController.plato);
+app.use('/api/v1/images/:id', (req, res, next) => {
+    res.download(path.join(__dirname, `images/${req.params.id}`));
+  });
 
-app.use('/api/v1/resources', (req, res, next) => {
-  express.static(
-    path.join(__dirname, `../ml/optimized_path`)
-  );
-});
-
-module.exports = app;
+  app.use('*', (req, res, next) => {
+    next(new AppError(`Cant find ${req.originalUrl}`));
+  });
+  app.use(globalErrorController);
+  
+  module.exports = app;

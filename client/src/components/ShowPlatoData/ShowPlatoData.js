@@ -12,6 +12,8 @@ const ShowPlatoData = (props) => {
       'Converting data to visual mode...',
     ];
     const get = async () => {
+      // const resp =await Axios.get(`${Config.LINK}/resource/${props.data._id}`);
+      // console.log(resp);
       setImage(props.data[props.imageName][0]);
     }
     useEffect(() => {
@@ -26,7 +28,7 @@ const ShowPlatoData = (props) => {
           i = 0;
           j++;
         }
-
+  
         if (j > x.length - 1) {
           clearInterval(interval);
           setText('Getting output data...');

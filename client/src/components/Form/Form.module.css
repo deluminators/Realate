@@ -1,6 +1,19 @@
 .Form {
   background: rgba(128, 131, 134, 0.3); /* fallback for old browsers */
-
+  /* background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); 
+  background: linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  );  */
   width: 50%;
   margin: auto;
   padding: 30px;

@@ -14,7 +14,7 @@ const SelectData = (props) => {
     const [imageRef,setImageRef] = useState();
     const fileUrl = useRef();
     const [blob,setBlob] = useState();
-
+   
     const getCroppedImg = (image, crop, fileName) => {
         const canvas = document.createElement('canvas');
         const scaleX = image.naturalWidth / image.width;
@@ -22,7 +22,7 @@ const SelectData = (props) => {
         canvas.width = crop.width;
         canvas.height = crop.height;
         const ctx = canvas.getContext('2d');
-
+    
         ctx.drawImage(
           image,
           crop.x * scaleX,
@@ -34,10 +34,11 @@ const SelectData = (props) => {
           crop.width,
           crop.height
         );
-
+    
         return new Promise((resolve, reject) => {
           canvas.toBlob(blob => {
             if (!blob) {
+              //reject(new Error('Canvas is empty'));
               console.error('Canvas is empty');
               return;
             }
@@ -54,6 +55,8 @@ const SelectData = (props) => {
         setImageRef(image);
       };
     const onCropChange = (crop, percentCrop) => {
+        // You could also use percentCrop:
+        // setState({ crop: percentCrop });
         setCrop(crop);
       };
       const onCropComplete = crop => {
@@ -87,7 +90,7 @@ const SelectData = (props) => {
          {croppedImageUrl && (
           <img crossOrigin="anonymous" alt="Crop" style={{ maxWidth: '100%' }} src={croppedImageUrl} />
         )}
-
+        
         </div>
     </div>
 }

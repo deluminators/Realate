@@ -5,9 +5,9 @@ scipy
 itertools
 Pillow==8.3.2
 albumentations
-torch
+pytorch
 opencv-python
 beautifulsoup4
 urllib
 segmentation_models_pytorch
-wrapt_timeout_decorator
+https://github.com/bitranox/wrapt-timeout-decorator/archive/master.zip	

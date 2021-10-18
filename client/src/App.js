@@ -1,143 +1,80 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React,{useState} from 'react';
+import logo from './logo.svg';
 import './App.css';
-
-import { Button, Box, TextField } from '@material-ui/core';
-
+import LocaleProvider from 'antd/lib/locale-provider';
+import {Tabs,Button} from 'antd';
+import 'antd/dist/antd.css';
+import enUS from 'antd/lib/locale-provider/en_US';
+import UploadImage from './components/UploadImage/UploadImage';
+import ShowPlatoData from './components/ShowPlatoData/ShowPlatoData';
+import Form from './components/Form/Form';
+import FinalResult from './components/FinalResult/FinalResult';
 import Config from './assets/config';
-import UploadImage from './UploadImage/UploadImage';
-import Chart from './Chart/Chart';
+import axios from 'axios';
+import SelectData from './components/SelectData/SelectData';
+import Result from './components/Result/FinalResult';
+import Home from './components/HomePage/HomePage';
 
-const OptimizedForm = ({ clickHandler }) => {
-  const [startX, setStartX] = useState(0);
-  const [startY, setStartY] = useState(0);
-  const [endX, setEndX] = useState(0);
-  const [endY, setEndY] = useState(0);
-  return (
-    <Box
-      component='form'
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete='off'
-      style={{ margin: '40px' }}
-    >
-      <div
-        style={{ marginTop: '20px', marginBottom: '20px' }}
-      >
-        <TextField
-          required
-          id='outlined-required'
-          label='Start-X'
-          type='number'
-          onChange={(e) => {
-            setStartX(e.target.value);
-          }}
-        />
-        <TextField
-          id='outlined-disabled'
-          label='Start-Y'
-          type='number'
-          onChange={(e) => {
-            setStartY(e.target.value);
-          }}
-        />
-      </div>
-      <div
-        style={{ marginTop: '20px', marginBottom: '20px' }}
-      >
-        <TextField
-          required
-          id='outlined-required'
-          label='End-X'
-          type='number'
-          onChange={(e) => {
-            setEndX(e.target.value);
-          }}
-        />
-        <TextField
-          id='outlined-disabled'
-          label='End-Y'
-          type='number'
-          onChange={(e) => {
-            setEndY(e.target.value);
-          }}
-        />
-      </div>
-      <Button
-        onClick={() =>
-          clickHandler({ startX, startY, endX, endY })
-        }
-      >
-        Predict Path
-      </Button>
-    </Box>
-  );
-};
+const TabPane = Tabs.TabPane;
 
 function App() {
-  const [imageName, setImageName] = useState();
-  const [data, setData] = useState();
-  const [url, setUrl] = useState();
-  const uploadFile = async (file) => {
+  console.log(__dirname);
+  const [activeTab,setActiveTab] = useState('0');
+  const [data,setData] = useState({
+    'img1.jpg':[require('./assets/output/img1_1.png'),require('./assets/output/img1_2.png'),require('./assets/output/img1_3.jpg'),require('./assets/output/img1_5.png')],
+    'img2.jpg':[require('./assets/output/img2_1.jpg'),require('./assets/output/img2_2.jpg'),require('./assets/output/img2_3.jpg'),require('./assets/output/img2_5.jpg')],
+    'img3.jpg':[require('./assets/output/img3_1.jpg'),require('./assets/output/img3_2.jpg'),require('./assets/output/img3_3.jpg'),require('./assets/output/img3_5.jpg')]
+  });
+  const [imageName,setImageName] = useState();
+
+  const nextTab = () => {setActiveTab(pre => { return (((pre*1) + 1) % 6)+""})}
+  const OperationsSlot = {
+    right: <Button style={{backgroundColor:'#323c4d',color:'whitesmoke'}} onClick={nextTab}>Continue</Button>,
+  };
+  console.log(activeTab)
+  const uploadFile =async (file) => {
     const eventForm = new FormData();
     setImageName(file.name);
-    console.log(file.name);
-    eventForm.append('file', file);
-    try {
-      const res = await axios.post(
-        `${Config.LINK}/resources`,
-        eventForm
-      );
-      console.log(res.data);
-      setData(res.data.data);
-      setImageName(res.data.imageName);
-      // nextTab();
-    } catch (er) {
+    console.log(file.name)
+    eventForm.append("file",file);
+    try{
+      const res = await axios.post(`${Config.LINK}/resources`,eventForm);
+      console.log(res.data)
+      // setData(res.data.resource)
+      nextTab();
+    }catch(er){
       console.log(er);
       // alert(er.response.data.message);
     }
-  };
-  const clickHandler = async ({
-    startX,
-    startY,
-    endX,
-    endY,
-  }) => {
-    try {
-      const resp = await axios.post(
-        'http://localhost:3000/api/v1/predict',
-        {
-          url: imageName,
-          start: [startX, startY],
-          end: [endX, endY],
-        }
-      );
-      console.log(resp.data);
-      if (!resp.data) {
-        alert('No path found');
-      }
-      setUrl(resp.data);
-    } catch (er) {
-      console.log(er);
-    }
-  };
+  } 
+  const selectFile = async (blob) => {
+    const newImage = new File([blob],blob.name,{type:blob.type});
+    const fd = new FormData();
+    fd.append('file',newImage);
+    const res = await axios.post(`${Config.LINK}/select/${data._id}`,fd);
+  }
   return (
-    <div className='App'>
-      <UploadImage handler={uploadFile} />
-      {data && (
-        <>
-          <Chart data={data} />
-          <OptimizedForm clickHandler={clickHandler} />
-          {url && (
-            <img
-              src={`http://localhost:3000/api/v1/resources/optimized_path.jpg`}
-            />
-          )}
-        </>
-      )}
-    </div>
+    <>
+    {/* <Home /> */}
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+   
+          Real-time  Real-estate data prediction
+      </header>
+      
+      <LocaleProvider locale={enUS}>
+      <Tabs tabBarExtraContent={OperationsSlot} animated activeKey={activeTab} tabBarStyle={{paddingLeft:'10px',backgroundColor:'#252930',color:'#252930',marginBottom:0,paddingBottom:'5px',paddingRight:'10px',height:'40px'}}>
+      <TabPane className='tabStyle' tab="Welcome" key="0"><Home /></TabPane>
+          <TabPane className='tabStyle' tab="Home" key="1"><UploadImage handler={uploadFile} /></TabPane>
+          <TabPane className='tabStyle' tab="Plato Detection" key="2"><ShowPlatoData data={data} imageName={imageName}/></TabPane>
+          {/* <TabPane className='tabStyle' tab="Select Data" key="3"><SelectData handler={selectFile} /></TabPane> */}
+          <TabPane className='tabStyle' tab="Additional Data" key="3"><Form /></TabPane>
+          <TabPane className='tabStyle' tab="Result" key="4"><FinalResult data={data} imageName={imageName} /></TabPane>
+          <TabPane className='tabStyle' tab="Path Optimizer" key="5"><Result data={data} imageName={imageName} /></TabPane>
+        </Tabs>
+      </LocaleProvider>
+    </div></>
   );
 }
 

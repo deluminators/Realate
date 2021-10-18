@@ -7,6 +7,7 @@ const sendErrorProd = (err, res) => {
       message: err.message,
     });
   } else {
+    // console.error(err);
     res.status(404).json({
       status: 'error',
       message: 'something went wrong!',

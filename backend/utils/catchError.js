@@ -2,6 +2,7 @@ const AppError = require('../utils/appError');
 module.exports = (fn) => {
   return (args) =>
     fn(args).catch((err) => {
+      //   console.log(er.message);
       let ferror;
       err.statusCode = err.statusCode || 500;
       err.status = err.status || 'error';

@@ -1,10 +1,16 @@
 .App {
   text-align: center;
+  background-image: url('https://i2.wp.com/www.localeadvisors.com/wp-content/uploads/2017/04/yard-home-hero.jpg?fit=2100%2C1400&ssl=1');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  z-index: 3;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 8vmin;
   pointer-events: none;
+  z-index: 3;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,18 +20,36 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 3;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #282c34
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #282c34
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.ant-checkbox-group-item {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +59,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.tabStyle {
+  /* background-color: rgb(63, 70, 82, 0.8); */
+  background-color: rgba(5, 6, 7, 0.75);
+}
+
+.HomeHeader {
+  transform: translateX(-50%);
 }
