@@ -3,7 +3,7 @@ import Particles from 'react-particles-js';
 
 
 const Home = () => {
-  
+
     return  <><Particles  params={{
 	    "particles": {
 	        "number": {
@@ -11,11 +11,6 @@ const Home = () => {
 	        },
 	        "size": {
                 "value": 5,
-                // "random": true,
-                // "anim": {
-	            //     "speed": 4,
-	            //     "size_min": 0.3
-                // }
 	        },
             "move": {
                 "random": true,
@@ -44,7 +39,7 @@ const Home = () => {
                 }
 	        }
         },
-        
+
 	}} />
     <div className='HomeHeader' style={{position:'fixed',backgroundColor:'transparent',top:'150px',left:'50%',translate:'-20px'}}>
     <h1 style={{color:'white',fontSize: 'calc(10px + 2vmin)',textAlign:'center'}}>Welcome to <span style={{fontSize:'28px',color:'#e66e74'}}>Realate</span> a Real-time Real-estate data prediction tool</h1>

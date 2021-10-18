@@ -126,7 +126,6 @@ function App() {
   return (
     <div className='App'>
       <UploadImage handler={uploadFile} />
-      {/* <Input type='file' onChange={uploadFile} /> */}
       {data && (
         <>
           <Chart data={data} />
