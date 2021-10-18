@@ -6,18 +6,18 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     const url = req.baseUrl;
     console.log(url);
-    cb(null, 'images');
+    cb(null, '../ml');
   },
   filename: function (req, file, cb) {
-    cb(null, uniqid('', `-${file.originalname}`));
+    cb(null, uniqid(''));
   },
 });
 
 const fileFilter = (req, file, cb) => {
   if (
-    file.mimetype === "image/png" ||
-    file.mimetype === "image/jpeg" ||
-    file.mimetype === "image/PNG"
+    file.mimetype === 'image/png' ||
+    file.mimetype === 'image/jpeg' ||
+    file.mimetype === 'image/PNG'
   ) {
     cb(null, true);
   } else {
@@ -25,9 +25,7 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-module.exports = 
-  multer({
-    storage,
-    fileFilter,
-  }).single('file')
-
+module.exports = multer({
+  storage,
+  fileFilter,
+}).any('file');
